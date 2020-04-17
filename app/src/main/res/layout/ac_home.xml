@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.rd.chartview.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_back"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/statistics"
+            android:textColor="@color/blue"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Update data terakhir Sumatera Barat"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/waktu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:text=""
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@color/gray_50"
+            android:id="@+id/lyPositif"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Positif"
+                android:onClick="positif"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/positif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="0"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="25dp"
+                android:layout_height="3dp"
+                android:background="@color/blue" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:layout_margin="30dp"
+            android:layout_gravity="center"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/lyodp"
+            android:padding="16dp"
+            android:onClick="odp"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="ODP"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/light_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/odp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="0"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+            <View
+                android:layout_width="25dp"
+                android:layout_height="3dp"
+                android:background="@color/blue" />
+        </LinearLayout>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:layout_margin="30dp"
+            android:layout_gravity="center"
+            android:background="@color/gray" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/lyPdp"
+            android:onClick="pdp"
+            android:padding="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="PDP"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/light_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/pdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="0"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="25dp"
+                android:layout_height="3dp"
+                android:background="@color/blue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.rd.chartview.view.ChartView
+        android:id="@+id/charView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp" />
+
+
+</LinearLayout>
